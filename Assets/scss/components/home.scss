@@ -1,0 +1,307 @@
+ h1 {
+     color: #468CBB;
+     font-family: $bodoni;
+ }
+ 
+ .homeDiv {
+     margin-left: 100px;
+     margin-right: 100px;
+     &_paraBelowMeetTeam {
+         font-family: $openSans;
+         font-weight: 400;
+         font-size: 18px;
+     }
+ }
+ 
+ hr {
+     color: #468CBB;
+ }
+ 
+ .container {
+     position: relative;
+ }
+ 
+ .container1 {
+     position: relative;
+     float: left;
+ }
+ 
+ .container2 {
+     position: relative;
+     margin-left: 10px;
+     float: left;
+ }
+ 
+ #imgTeam {
+     text-align: center;
+     object-fit: fill;
+     border-radius: 30px;
+ }
+ 
+ .bottom-left {
+     width: auto;
+     position: absolute;
+     background-color: #6EABBF;
+     bottom: 1px;
+     color: white;
+     text-align: center;
+     vertical-align: middle;
+     display: flex;
+     font-family: $bodoni;
+     justify-content: center;
+     align-items: center;
+     height: 50px;
+     width: 200px;
+     border-bottom-left-radius: 30px;
+     border-bottom-right-radius: 30px;
+ }
+ 
+ .fa-solid fa-angle-right {
+     text-align: center;
+ }
+ 
+ #docBigId {
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+ }
+ 
+ #docDetails {
+     border: 0.1px solid #6EABBF;
+     display: flex;
+     border-radius: 20px;
+     flex-direction: row;
+ }
+ 
+ #docImageForIntro {
+     height: 100%;
+ }
+ 
+ #docImageIntroText {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ #docImageIntroText_Div {
+     h1 {
+         font-size: 45px;
+         text-align: center;
+     }
+     h3 {
+         font-size: 25px;
+         text-align: center;
+     }
+     justify-content: center;
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-top: 20px;
+     font-size: 14px;
+     text-align: start;
+ }
+ 
+ #seeMoreBtn {
+     width: 100%;
+     border: none;
+     height: 50px;
+     border-bottom-right-radius: 20px;
+     font-size: 18px;
+     background-color: #6EABBF;
+     color: white;
+ }
+ 
+ #bottomDiv {
+     width: 100%;
+     border: none;
+     height: auto;
+     display: flex;
+     text-align: center;
+     flex-direction: row;
+ }
+ 
+ #compDetails {
+     h1,
+     p {
+         color: white;
+     }
+     p {
+         font-size: 10px;
+     }
+     padding: 15px;
+     font-size: 12px;
+     text-align: center;
+     justify-content: start;
+     width: 60%;
+     color: white;
+     background-color: black;
+ }
+ 
+ #aboutDiv {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     width: 100%;
+     background-color: #DEDEDE;
+     justify-content: space-evenly;
+     #aboutDiv_1,
+     #aboutDiv_2 {
+         text-align: center;
+         h4 {
+             color: black;
+         }
+     }
+ }
+ 
+ #fDiv {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     background-color: black;
+     p {
+         color: white;
+         font-size: 10px;
+     }
+ }
+ 
+ #meetTheTeam {
+     color: #468CBB;
+ }
+ 
+ body {
+     // overflow-x: hidden;
+     padding-top: 0;
+ }
+ 
+ #containerHeader {
+     position: fixed;
+     z-index: 9;
+     top: 0;
+     width: 100%;
+ }
+ 
+ #carouselExampleControls {
+     width: 100%;
+     clip-path: ellipse(98% 88% at 50% 10%);
+     width: 100%;
+     object-fit: contain;
+     background-repeat: no-repeat;
+     height: 600px;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ #headerDiv {
+     opacity: .8;
+     background-color: black;
+     color: white;
+     text-align: end;
+     width: 100%;
+     padding: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: end;
+     text-align: end;
+     height: max-content;
+     float: right;
+ }
+ 
+ #createAccount {
+     color: white;
+     font-size: 14px;
+     text-decoration: none;
+     margin-right: 20px;
+ }
+ 
+ #header {
+     width: 100%;
+     opacity: .8;
+     background-color: black;
+     height: auto;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     display: flex;
+     flex-direction: row;
+     text-align: center;
+     align-items: center;
+     justify-content: space-between;
+     border-top: 1px solid white;
+     border-bottom: 1px solid white;
+ }
+ 
+ #menuIcon {
+     color: white;
+     height: 50px;
+     margin-right: 20px;
+ }
+ 
+ #headerLogo {
+     margin-left: 20px;
+     height: 50px;
+ }
+ 
+ #abtDiv11 {
+     opacity: .8;
+     width: 100%;
+     background-color: black;
+     padding-top: 10px;
+     margin: 0;
+     padding-left: 20px;
+     padding-right: 20px;
+     display: flex;
+     align-content: space-around;
+     justify-content: space-between;
+     padding-bottom: 10px;
+     align-items: center;
+     height: max-content;
+ }
+ 
+ #whiteP,
+ #gallery,
+ #plasticRe,
+ #abt,
+ #meetTheTeamPara,
+ #locationPara,
+ #contactPara,
+ #services {
+     color: whitesmoke;
+     font-size: 15px;
+ }
+ 
+ #servicesDropDiv {
+     opacity: .8;
+     background-color: black;
+     width: 100%;
+     height: max-content;
+     padding: 10px;
+     display: none;
+     flex-direction: row;
+     text-align: center;
+     padding-left: 25%;
+     border-top: 1px solid white;
+     padding-right: 25%;
+     color: whitesmoke;
+     width: 100%;
+     align-content: space-around;
+     justify-content: space-evenly;
+ }
+ 
+ #galleryDropDiv {
+     background-color: black;
+     opacity: .8;
+     width: 100%;
+     height: max-content;
+     padding: 10px;
+     display: none;
+     flex-direction: row;
+     text-align: center;
+     padding-left: 25%;
+     border-top: 1px solid white;
+     padding-right: 25%;
+     color: whitesmoke;
+     width: 100%;
+     align-content: space-around;
+     justify-content: space-evenly;
+ }

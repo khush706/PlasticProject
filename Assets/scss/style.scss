@@ -1,0 +1,19 @@
+/*=============  Vendor style   ================================*/
+
+@import "./vendor/bootstrap";
+@import "./vendor/fontawesome";
+
+/*=================  base scss  ================================*/
+
+@import "./base/fonts";
+@import "./base/var";
+@import "./base/mixin";
+@import "./base/base";
+@import "./base/theme";
+
+/*============= Component style ================================*/
+
+@import "./components/about.scss";
+@import "./components/home.scss";
+@import "./components/location.scss";
+@import "./components/location_contact.scss";

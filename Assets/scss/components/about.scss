@@ -1,0 +1,313 @@
+.headerSection {
+    top: 0;
+    position: static;
+    .header {
+        background-color: black;
+        opacity: .8;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+        max-height: 70px;
+        &_img {
+            padding: 5px;
+            object-fit: contain;
+            height: 60px;
+        }
+        &_header_userDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        i,
+        img {
+            align-items: center;
+            float: left;
+            margin-left: 7px;
+            margin-right: 7px;
+            font-size: 30px;
+            color: white;
+        }
+    }
+}
+
+#iframe {
+    display: none;
+}
+
+#iPlayBtn {
+    cursor: pointer;
+}
+
+.grid_div_for_iframe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    &_docIntroDataText {
+        background-color: whitesmoke;
+        width: 40%;
+        height: 500px;
+        padding: 0, 20px, 20px, 20px;
+        p {
+            margin-top: -10px;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 30px;
+            text-align: start;
+            padding-bottom: 20px;
+            font-family: $bodoni;
+            font-size: 30px;
+            color: #06467E;
+        }
+    }
+    &_imageHolderDiv {
+        background-image: url("../../images/docIntroImage.jpg");
+        min-height: 100%;
+        background-repeat: no-repeat;
+        width: 60%;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        color: white;
+        align-items: center;
+    }
+}
+
+.titleBelowHeaderAbout {
+    opacity: .8;
+    background-color: black;
+    border-top: 1px solid whitesmoke;
+    background-color: black;
+    text-align: center;
+    p {
+        font-family: $bodoni;
+        padding: 5px;
+        font-size: 30px;
+        padding-bottom: 10px;
+        color: whitesmoke;
+    }
+}
+
+.aboutDiv {
+    text-align: center;
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    p {
+        font-family: $bodoni;
+        padding: 5px;
+        font-size: 20px;
+        color: whitesmoke;
+    }
+}
+
+.heroImage {
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    clip-path: ellipse(98% 88% at 47% 10%);
+    background-attachment: fixed;
+    // background-image: url("../../images/large-hero.png");
+}
+
+.details_div {
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    text-align: start;
+    hr {
+        height: 4px;
+    }
+    p {
+        font-family: $openSans;
+    }
+}
+
+.experience {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    hr {
+        height: 4px;
+    }
+    &_log {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: start;
+        h3 {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: none;
+    margin: 0;
+    min-height: max-content;
+    padding: 0;
+    border-bottom: 1px solid white;
+    align-items: center;
+    &_info {
+        img {
+            width: 150px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        text-align: center;
+        background-color: black;
+        color: whitesmoke;
+        p {
+            color: whitesmoke;
+            font-size: 15px;
+        }
+    }
+    &_about {
+        display: flex;
+        flex-flow: column;
+        background-color: whitesmoke;
+        width: 60%;
+        text-align: center;
+        p {
+            display: flex;
+            align-items: center;
+            padding: 3px;
+            justify-content: space-around;
+            font-size: 17px;
+        }
+    }
+}
+
+.fDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    p {
+        color: white;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .titleBelowHeaderAbout {
+        p {
+            font-size: 22px;
+        }
+    }
+    .aboutDiv {
+        p {
+            font-size: 18px;
+        }
+    }
+    .grid_div_for_iframe {
+        flex-direction: column;
+    }
+    .grid_div_for_iframe_imageHolderDiv {
+        height: 500px;
+        width: 100%;
+    }
+    iframe {
+        width: 100%;
+    }
+    .grid_div_for_iframe_docIntroDataText {
+        width: 100%;
+        height: max-content;
+        p {
+            font-size: 30px;
+        }
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .experience {
+        &_log {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    .footer {
+        &_about {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .titleBelowHeaderAbout {
+        p {
+            font-size: 18px;
+        }
+    }
+    .heroImage {
+        height: 300px;
+    }
+    .aboutDiv {
+        p {
+            font-size: 15px;
+        }
+    }
+    .grid_div_for_iframe_docIntroDataText {
+        p {
+            font-size: 20px;
+        }
+    }
+    .details_div {
+        p {
+            font-size: 20px;
+        }
+    }
+    h3 {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .experience {
+        h3 {
+            font-size: 15px;
+        }
+        h1 {
+            font-size: 15px;
+        }
+        &_log {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .footer {
+        &_about {
+            font-size: 10px;
+        }
+    }
+}
