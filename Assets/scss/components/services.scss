@@ -23,7 +23,7 @@
         align-items: center;
         flex-wrap: wrap;
         margin-top: 40px;
-        &_face_div {
+        &_accordian_div {
             margin-top: 15px;
             border: 1px solid $cerrlean-frost;
             width: 100%;
@@ -52,76 +52,25 @@
                         font-weight: 400;
                         font-size: 22px;
                         color: $cerrlean-frost;
-                    }
-                }
-                &_content {
-                    display: none;
-                    padding-top: 15px;
-                    &_p {
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        font-weight: 400;
-                        font-size: 18px;
-                        margin-top: 15px;
-                    }
-                    a {
-                        float: right;
-                        padding-right: 20px;
-                        padding-bottom: 15px;
-                        text-align: end;
                     }
                 }
             }
         }
-        //Body Div
-        &_body_div {
-            margin-top: 15px;
-            border: 1px solid $cerrlean-frost;
-            width: 100%;
-            &_header {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-                &_head {
-                    padding: 20px;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    align-content: center;
-                    justify-content: space-between;
-                    i {
-                        cursor: pointer;
-                        font-size: 28px;
-                        color: $cerrlean-frost;
-                    }
-                    p {
-                        font-weight: 400;
-                        font-size: 22px;
-                        color: $cerrlean-frost;
-                    }
-                }
-                &_content {
-                    display: none;
-                    padding-top: 15px;
-                    &_p {
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        font-weight: 400;
-                        font-size: 18px;
-                        margin-top: 15px;
-                    }
-                    a {
-                        float: right;
-                        padding-right: 20px;
-                        padding-bottom: 15px;
-                        text-align: end;
-                    }
-                }
+        &_inner_content_div {
+            display: none;
+            padding-top: 15px;
+            &_p {
+                padding-left: 20px;
+                padding-right: 20px;
+                font-weight: 400;
+                font-size: 18px;
+                margin-top: 15px;
+            }
+            a {
+                float: right;
+                padding-right: 20px;
+                padding-bottom: 15px;
+                text-align: end;
             }
         }
         //body div end flex 
