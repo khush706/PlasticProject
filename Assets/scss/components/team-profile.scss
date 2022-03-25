@@ -1,0 +1,56 @@
+.team__header {
+    background-image: url("../../images/large-hero.png");
+    background-position: center;
+    background-size: cover;
+    clip-path: ellipse(74% 100% at 50% 0%);
+    min-height: 700px;
+    &__sign-in {
+        background-color: black;
+        min-width: 100%;
+        @include flexRow;
+        border-bottom: 2px solid whitesmoke;
+        padding: 5px 20px 5px 0px;
+        justify-content: flex-end;
+        i {
+            padding: 5px;
+            font-size: 18px;
+            color: whitesmoke;
+        }
+        p {
+            padding: 5px;
+            font-size: 15px;
+            font-weight: 400;
+            color: whitesmoke;
+        }
+    }
+    &__company-logo {
+        @include flexRow;
+        padding-left: 20px;
+        padding-top: 8px;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        background-color: black;
+        border-bottom: 1px solid whitesmoke;
+        opacity: .8;
+        img {
+            width: 8%;
+        }
+        i {
+            color: white;
+            font-size: 26px;
+            padding-right: 20px;
+        }
+    }
+    &__about-row {
+        @include flexRow;
+        justify-content: space-evenly;
+        background-color: black;
+        opacity: .8;
+        p {
+            color: whitesmoke;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 8px;
+        }
+    }
+}
