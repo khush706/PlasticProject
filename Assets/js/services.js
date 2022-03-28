@@ -1,4 +1,4 @@
-var accordian_heading = document.getElementsByClassName("services_body_services_details_accordian_div_header_head");
+var accordian_heading = document.querySelectorAll(".services_body_services_details_accordian_div_header_head");
 for (var i = 0; i < accordian_heading.length; i++) {
     addClickEvent(i);
 }
