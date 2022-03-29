@@ -473,6 +473,12 @@
         transform: scaleY(-1);
         padding-bottom: 60px;
         justify-content: space-between;
+        iframe {
+            display: none;
+            transform: scaleY(-1);
+            width: 45%;
+            min-height: 300px;
+        }
         &-thumbnail-div {
             transform: scaleY(-1);
             background-image: url("../../images/docIntroImage.jpg");
@@ -498,4 +504,120 @@
             font-weight: 300;
         }
     }
+
+    &__education-div {
+        margin-left: 7%;
+        margin-top: 40px;
+        margin-right: 7%;
+        h1 {
+            color: $dark-red;
+        }
+        &-school-list {
+            margin-top: 20px;
+            @include flexRow;
+            justify-content: space-between;
+            align-items: flex-start;
+            &-container-one {
+                @include flexColumn;
+                width: 50%;
+                p {
+                    width: 100%;
+                    padding-bottom: 3px;
+                    text-align: start;
+                    font-size: 18px;
+                }
+                div {
+                    width: 100%;
+                    margin-top: 25px;
+                }
+            }
+            &-container-two {
+                @include flexColumn;
+                width: 50%;
+                p {
+                    width: 100%;
+                    padding-bottom: 3px;
+                    text-align: start;
+                    font-size: 18px;
+                }
+                div {
+                    width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+    &__locations {
+        padding-left: 7%;
+        background-color: whitesmoke;
+        padding-right: 7%;
+        margin-top: 40px;
+        h1 {
+            padding-top: 40px;
+            color: $dark-red;
+        }
+
+        &-container {
+            @include flexRow;
+
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            &-div {
+                width: 32%;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                background-color: white;
+                @include flexColumn;
+                box-shadow: 0 3px 5px -3px gray;
+                div {
+                    padding: 10px;
+                    width: 100%;
+                    text-align: start;
+                }
+                p {
+                    font-size: 18px;
+                }
+                &-phone-number {
+                    color: $dark-red;
+                }
+                &-office-hours {
+                    background-color: whitesmoke;
+                    margin-top: 20px;
+                    b {
+                        color: $dark-red;
+                    }
+                    p {
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+&__footer {
+    @include flexRow;
+    justify-content: space-between;
+    padding-left: 3%;
+    background-color: black;
+    padding-right: 3%;
+
+    &__footer-social {
+        @include flexColumn;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        h1 {
+            color: white;
+        }
+        p {
+            text-align: center;
+            color: white;
+        }
+    }
+}
 }
