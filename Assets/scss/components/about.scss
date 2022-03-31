@@ -312,8 +312,9 @@
 //     }
 // }
 
+
+
 .about__header {
-    z-index: 100;
     min-width: 100%;
     &__nav-div {
         @include flexRow;
@@ -386,7 +387,7 @@
         padding-left: 80px;
         padding-top: 12px;
         padding-bottom: 12px;
-        
+
         p {
             font-size: 18px;
             color: black;
@@ -569,7 +570,7 @@
             flex-wrap: wrap;
             align-content: flex-start;
             &-div {
-                width: 32%;
+                width: fit-content;
                 margin-top: 40px;
                 margin-bottom: 20px;
                 background-color: white;
@@ -587,6 +588,7 @@
                     color: $dark-red;
                 }
                 &-office-hours {
+                    width: 100%;
                     background-color: whitesmoke;
                     margin-top: 20px;
                     b {
@@ -600,21 +602,18 @@
         }
     }
 
-    
-
     &__footer {
         @include flexRow;
         background-color: black;
-        min-height: 350px;
+        min-height: 400px;
         justify-content: space-between;
         align-items: flex-start;
         align-content: center;
 
         &-one {
-            
-        padding-bottom: 40px;
+            padding-bottom: 40px;
             width: 24%;
-            min-height: 350px;
+            min-height: 400px;
             @include flexColumn;
             justify-content: space-between;
             padding-left: 30px;
@@ -627,9 +626,9 @@
                 text-align: start;
             }
             &-sub-heading {
-                padding-top: 30px;
+                padding-top: 20px;
                 color: white;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 300;
                 text-align: start;
             }
@@ -646,9 +645,9 @@
 
         &-two {
             width: 40%;
-            
-        padding-bottom: 40px;
-            min-height: 350px;
+
+            padding-bottom: 40px;
+            min-height: 400px;
             @include flexColumn;
             justify-content: space-between;
             align-items: flex-start;
@@ -667,7 +666,7 @@
                     @include flexColumn;
                     justify-content: space-between;
                     align-items: flex-start;
-                    padding-left: 30px;
+                    padding-right: 30px;
                     padding-top: 10px;
                     div {
                         padding-top: 10px;
@@ -684,7 +683,7 @@
             &-vendor-links {
                 @include flexRow;
                 justify-content: space-between;
-                
+
                 padding-left: 5%;
                 p {
                     padding-left: 10px;
@@ -695,11 +694,10 @@
             }
         }
         &-three {
-            
-        padding-bottom: 40px;
+            padding-bottom: 40px;
             width: 30%;
             padding-left: 30px;
-            min-height: 350px;
+            min-height: 400px;
             @include flexColumn;
             padding-right: 15px;
             justify-content: space-between;
@@ -721,9 +719,9 @@
                     font-weight: 300;
                 }
             }
-            &-container-two{
+            &-container-two {
                 // padding-bottom: 40px;
-                button{
+                button {
                     border: none;
                     background-color: $dark-red;
                     color: white;
@@ -733,9 +731,8 @@
                     font-size: 18px;
                     padding-bottom: 15px;
                     margin-bottom: 20px;
-
                 }
-                p{
+                p {
                     padding-top: 20px;
                     color: white;
                     font-size: 15px;
@@ -743,5 +740,142 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {   
+    .about__header__nav-div {
+        flex-direction: column;
+        justify-content: flex-start;
+        &-left-row {
+            background-color: white;
+            min-width: 100%;
+            div {
+                aspect-ratio: 1/1;
+                @include flexColumn;
+                justify-content: space-evenly;
+                height: 100%;
+                background-color: $dark-red;
+            }
+            i {
+                font-size: 18px;
+            }
+            p {
+                font-size: 12px;
+                padding-bottom: 5px;
+            }
+            img {
+                min-width: 30%;
+            }
+        }
+    }
+    .about__header__nav-div-right-row {
+        padding: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+        div {
+            p {
+                display: none;
+            }
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+    .about__header__page-heading {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h4 {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    .about__header__nav-row {
+        @include flexRow;
+        padding-left: 10px;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        p {
+            padding-right: 10px;
+            display: inline-block;
+            min-width: fit-content;
+            text-align: start;
+            font-size: 10px;
+        }
+    }
+
+    .about__body__doctor-image{
+        padding-left: 20px;
+        min-height: 400px;
+        h1{
+            font-size: 32px;
+        }
+        button{
+            padding-left: 5px;
+            padding-right: 5px;            
+            min-width: 50%;
+            font-size: 12px;
+        }
+    }
+
+    .about__body__content-header{
+            margin-top: 40px;
+            &-bread-crump{
+                display: none;
+            }
+    }
+    .about__body__content-body{
+        p{
+            font-size: 12px;
+        }
+    }
+    .about__body__doctor-intro{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        div{
+            min-width: 90%;
+            min-height: 250px;
+            i{
+                font-size: 35px;
+            }
+        }
+        iframe{
+            min-width: 90%;
+            height: 250px;
+        }
+        p{
+            padding-top: 25px;
+            min-width: 100%;
+            text-align: justify;
+            font-size: 16px;
+        }
+    }
+    .about__body__education-div-school-list{
+        flex-direction: column;
+        p{
+            font-size: 16px;
+        }
+        div{
+            min-width: 100%;
+
+        }
+    }
+
+    .about__body__locations-container{
+        div{
+            min-width: fit-content;
+            div{
+                min-width: 100%;
+            }
+        }
+    }
+
+    .about__body__footer{
+        display: none;
     }
 }
