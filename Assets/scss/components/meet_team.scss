@@ -7,12 +7,12 @@
         background-color: white;
         align-content: center;
         &-left-row {
-            background-color: $dark-red;
+            background-color: $red;
             i {
                 width: 70px;
                 text-align: center;
                 font-size: 30px;
-                background-color: $dark-red;
+                background-color: $red;
                 color: white;
                 padding-top: 10px;
                 padding-left: 10px;
@@ -44,7 +44,7 @@
                 i {
                     padding: 10px;
                     font-size: 18px;
-                    color: $dark-red;
+                    color: $red;
                 }
                 p {
                     font-weight: 300;
@@ -61,7 +61,7 @@
         width: 100%;
         padding-bottom: 10px;
         padding-top: 10px;
-        color: $dark-red;
+        color: $red;
         border-bottom: 2px solid $grey94;
     }
 
@@ -78,7 +78,7 @@
             padding-right: 50px;
         }
         p:hover {
-            color: $dark-red;
+            color: $red;
         }
     }
 }
@@ -107,12 +107,12 @@
         }
         &-sub-heading {
             font-size: 60px;
-            color: $dark-red;
+            color: $red;
         }
         &-button {
             margin-top: 20px;
             background-color: white;
-            border: 0.1px solid $dark-red;
+            border: 0.1px solid $red;
             padding: 20px;
             font-weight: 500;
         }
@@ -123,20 +123,20 @@
         p {
             padding-top: 30px;
             font-weight: 500;
-            color: $dark-red;
+            color: $red;
             font-size: 25px;
             text-align: center;
         }
         button {
-            margin-top: 20px;
+            margin-top: 40px;
             border: none;
-            background-color: $dark-red;
+            background-color: $red;
             color: white;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
             padding-left: 60px;
             padding-right: 60px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
         }
     }
 
@@ -174,7 +174,6 @@
                 }
             }
             &-second {
-                // box-shadow: 2px 2px 2px 2px #151515;
                 padding: 15px;
                 border-top-right-radius: 50px;
                 border-bottom-left-radius: 50px;
@@ -199,7 +198,7 @@
         }
 
         &-curved-div {
-            background-color: #bf2531;
+            background-color: $red;
             width: 100%;
             margin-top: 70px;
             position: absolute;
@@ -235,7 +234,7 @@
             padding-bottom: 20px;
         }
         &-p {
-            color: $dark-red;
+            color: $red;
             font-family: $bodoni;
             font-weight: bold;
             padding-bottom: 20px;
@@ -296,7 +295,7 @@
         align-content: center;
 
         button {
-            background-color: #bf2531;
+            background-color: $red;
             padding-left: 60px;
             padding-right: 60px;
             padding-top: 15px;
