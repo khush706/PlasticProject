@@ -1,0 +1,188 @@
+.patient__stories__header {
+    min-width: 100%;
+    &__nav-div {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        align-content: center;
+        &-left-row {
+            background-color: $red;
+            i {
+                width: 70px;
+                text-align: center;
+                font-size: 30px;
+                background-color: $red;
+                color: white;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            p {
+                font-size: 14px;
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+            img {
+                padding: 10px;
+                background-color: white;
+                width: 140px;
+            }
+            @include flexRow;
+        }
+        &-right-row {
+            background-color: white;
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding-right: 10px;
+            div {
+                margin: 10px;
+                @include flexRow;
+                i {
+                    padding: 10px;
+                    font-size: 18px;
+                    color: $red;
+                }
+                p {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__page-heading {
+        background-color: white;
+        border-top: 2px solid $grey94;
+        padding-left: 80px;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: $red;
+        border-bottom: 2px solid $grey94;
+    }
+
+    &__nav-row {
+        @include flexRow;
+        background-color: whitesmoke;
+        padding-left: 80px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        p {
+            font-size: 18px;
+            color: black;
+            padding-right: 50px;
+        }
+        p:hover {
+            color: $red;
+        }
+    }
+}
+
+.patient__stories__body {
+    &-banner-image {
+        clip-path: ellipse(113% 82% at 50% 16%);
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-image: url("../../images/meet-team-header.png");
+        background-position: center;
+        min-height: 500px;
+        min-width: 100%;
+        @include flexColumn;
+        justify-content: center;
+        padding-left: 120px;
+        align-items: flex-start;
+        align-content: center;
+        background-position: center;
+        background-size: cover;
+
+        &-heading {
+            color: black;
+            font-size: 60px;
+            padding: 0;
+            line-height: 0.5;
+            margin: 0;
+        }
+        &-sub-heading {
+            font-size: 60px;
+            color: $red;
+        }
+        &-button {
+            margin-top: 20px;
+            background-color: white;
+            border: 0.1px solid $red;
+            padding: 20px;
+            font-weight: 500;
+        }
+    }
+
+    &-page-location{
+        @include flexRow;
+        justify-content: space-between;
+        padding-left: 7%;
+        margin-top: 30px;
+        padding-right: 7%;
+        h1{
+            color: $red;
+
+        }
+        p{
+            font-size: 16px;
+            color: $orange;
+        }
+        
+    }
+    &-page-location-details{
+        padding-left: 7%;
+        margin-top: 30px;
+        line-height: 1.7;
+        font-size: 18px;
+        padding-right: 7%;    
+    }
+
+    &-stories{
+        @include flexRow;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-left: 7%;
+        padding-right: 7%;
+        
+        &-patient{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: whitesmoke;
+            background-image: linear-gradient(to bottom, white, whitesmoke);
+            @include flexColumn;
+            justify-content: space-between;
+            img{
+                box-shadow: 0px 25px 20px -20px #111;    
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+            p{
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                line-height: 1.5;
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+            a{
+                margin-top: 20px;
+                padding-top: 10px;
+                width: 100%;
+                background-color: $red;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

@@ -2,6 +2,9 @@
 $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
 // Extra small screen / phone
 xs: 0, // Small screen / phone
+mb-one:320px,
+mb-two: 375px,
+mb-three:425px,
 mb: 426px, //mobile device
 sm: 576px, // Medium screen / tablet
 md: 768px, // Large screen / desktop

@@ -1,17 +1,18 @@
 .meet__team__header {
     min-width: 100%;
     &__nav-div {
-        @include max-screen(sm) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
         @include flexRow;
         justify-content: space-between;
         align-items: center;
         background-color: white;
         align-content: center;
+        @include max-screen(mb) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         &-left-row {
             background-color: $red;
+
             i {
                 @include min-screen(mb) {
                     font-size: 25px;
@@ -61,10 +62,10 @@
                     // @include max-screen(mb) {
                     //     display: none;
                     // }
-                        display: none;
-                        @include min-screen(sm){
-                            display: inline-block;
-                        }
+                    display: none;
+                    @include min-screen(sm) {
+                        display: inline-block;
+                    }
                     font-weight: 300;
                     font-size: 14px;
                 }
@@ -73,10 +74,6 @@
     }
 
     &__page-heading {
-        @include max-screen(sm) {
-            padding-left: 0;
-            text-align: center;
-        }
         background-color: white;
         border-top: 2px solid $grey94;
         padding-left: 80px;
@@ -85,23 +82,25 @@
         padding-top: 10px;
         color: $red;
         border-bottom: 2px solid $grey94;
+        @include max-screen(mb) {
+            padding-left: 0;
+            text-align: center;
+        }
     }
 
     &__nav-row {
-        @include max-screen(sm) {
-            padding-left: 0;
-            width: 100%;
-            justify-content: space-evenly;
-        }
         @include flexRow;
         background-color: whitesmoke;
         padding-left: 80px;
         padding-top: 12px;
         padding-bottom: 12px;
-
+        @include max-screen(mb) {
+            padding-left: 0;
+            justify-content: space-evenly;
+        }
         p {
-            @include max-screen(sm) {
-                font-size: 12px;
+            @include max-screen(mb) {
+                font-size: 13px;
                 padding-right: 0;
             }
             font-size: 18px;
@@ -124,58 +123,57 @@
         min-height: 500px;
         min-width: 100%;
         @include flexColumn;
-        @include max-screen(sm) {
-            padding-left: 20px;
-        }
         justify-content: center;
         padding-left: 120px;
         align-items: flex-start;
         align-content: center;
         background-position: center;
         background-size: cover;
+        @include max-screen(mb) {
+            padding-left: 15px;
+        }
         &-heading {
-            @include max-screen(sm) {
-                font-size: 35px;
-            }
             color: black;
             font-size: 60px;
             padding: 0;
             line-height: 0.5;
             margin: 0;
+            @include max-screen(mb) {
+                font-size: 40px;
+            }
         }
         &-sub-heading {
-            @include max-screen(sm) {
-                font-size: 35px;
-            }
             font-size: 60px;
             color: $red;
+            @include max-screen(mb) {
+                font-size: 40px;
+            }
         }
         &-button {
-            @include max-screen(sm) {
-                font-size: 15px;
-                padding: 12px;
-            }
             margin-top: 20px;
             background-color: white;
             border: 0.1px solid $red;
             padding: 20px;
             font-weight: 500;
+            @include max-screen(mb) {
+                padding: 10px;
+            }
         }
     }
 
     &-artical {
         @include flexColumn;
         p {
-            @include max-screen(sm) {
-                font-size: 20px;
-                padding-left: 7%;
-                padding-right: 7%;
-            }
             padding-top: 30px;
             font-weight: 500;
             color: $red;
             font-size: 25px;
             text-align: center;
+            @include max-screen(mb) {
+                padding-left: 5%;
+                padding-right: 5%;
+                font-size: 18px;
+            }
         }
         button {
             margin-top: 40px;
@@ -194,7 +192,6 @@
         margin-top: 50px;
         &-recons {
             @include flexColumn;
-
             position: absolute;
             flex-wrap: wrap;
             z-index: 5;
@@ -202,48 +199,40 @@
             padding-top: -100px;
             min-height: 400px;
             justify-content: space-between;
+
             &-div {
                 @include flexRow;
-                @include max-screen(sm) {
-                    flex-direction: column;
-                    margin-top: -40px;
-                }
-
                 justify-content: space-between;
                 align-items: stretch;
                 margin-left: 10%;
                 margin-top: -50px;
                 margin-right: 10%;
+                @include max-screen(mb) {
+                    flex-direction: column;
+                }
                 &-first {
-                    @include max-screen(sm) {
+                    @include max-screen(mb) {
                         width: 100%;
                         margin-bottom: 20px;
                     }
                     width: 48%;
                     padding: 15px;
                     border-top-left-radius: 50px;
-                    // box-shadow: 2px 2px 2px 2px #151515;
                     border-bottom-right-radius: 50px;
                     background-color: black;
                     &-heading {
+                        @include max-screen(mb) {
+                            font-size: 18px;
+                        }
                         padding-top: 10px;
                         padding-left: 15px;
-                        @include max-screen(sm) {
-                            font-size: 15px;
-                        }
-                        @include max-screen(mb) {
-                            font-size: 12px;
-                        }
                         font-size: 25px;
                         padding-bottom: 15px;
                         color: whitesmoke;
                     }
                     &-sub-heading {
-                        @include max-screen(sm) {
-                            font-size: 12px;
-                        }
                         @include max-screen(mb) {
-                            font-size: 10px;
+                            font-size: 14px;
                         }
                         padding-left: 15px;
                         padding-right: 15px;
@@ -254,7 +243,7 @@
                     }
                 }
                 &-second {
-                    @include max-screen(sm) {
+                    @include max-screen(mb) {
                         width: 100%;
                     }
                     padding: 15px;
@@ -263,24 +252,19 @@
                     width: 48%;
                     background-color: black;
                     &-heading {
+                        @include max-screen(mb) {
+                            font-size: 18px;
+                        }
                         padding-top: 10px;
                         padding-left: 15px;
-                        @include max-screen(sm) {
-                            font-size: 15px;
-                        }
-                        @include max-screen(mb) {
-                            font-size: 12px;
-                        }
+
                         font-size: 25px;
                         padding-bottom: 15px;
                         color: whitesmoke;
                     }
                     &-sub-heading {
-                        @include max-screen(sm) {
-                            font-size: 12px;
-                        }
                         @include max-screen(mb) {
-                            font-size: 10px;
+                            font-size: 14px;
                         }
                         padding-left: 15px;
                         padding-right: 15px;
@@ -292,11 +276,8 @@
                 }
             }
             &-p {
-                @include max-screen(sm) {
-                    font-size: 12px;
-                }
                 @include max-screen(mb) {
-                    font-size: 10px;
+                font-size: 14px;
                 }
                 z-index: 5;
                 bottom: 0;
@@ -311,11 +292,27 @@
             }
         }
         &-curved-div {
-            @include max-screen(sm) {
-                min-height: 420px;
+            
+            @include max-screen(mb-one) {
+                min-height: 1000px;
+                margin-bottom: 20px;
             }
-            @include max-screen(mb) {
-                min-height: 600px;
+            @include min-screen(mb-two) {
+                min-height: 900px;
+                margin-bottom: 20px;
+            }
+            @include min-screen(mb-three) {
+                min-height: 800px;
+                margin-bottom: 20px;
+            }
+            @include min-screen(md) {
+                min-height: 650px;
+            }
+            @include min-screen(lg){
+                min-height: 500px;
+            }
+            @include min-screen(xl){
+                min-height: 450px;
             }
             background-color: $red;
             width: 100%;
@@ -329,28 +326,19 @@
     &-popular-services {
         padding-left: 15%;
         padding-right: 15%;
-        @include max-screen(sm) {
-            margin-top: 30px;
-        }
+
         @include flexColumn;
         justify-content: space-evenly;
         &-heading {
-            @include max-screen(sm) {
-                font-size: 35px;
-            }
             @include max-screen(mb) {
-                font-size: 25px;
-                width: 100%;
                 text-align: center;
+                font-size: 35px;
             }
             color: black;
             font-size: 48px;
             padding-bottom: 20px;
         }
         &-sub-heading {
-            @include max-screen(sm) {
-                font-size: 12px;
-            }
             font-size: 16px;
             line-height: 1.5;
             text-align: center;
@@ -358,9 +346,7 @@
         }
         &-p {
             @include max-screen(mb) {
-                width: 100%;
-                text-align: center;
-                font-size: 16px;
+                font-size: 19px;
             }
             color: $red;
             font-family: $bodoni;
@@ -370,25 +356,19 @@
     }
 
     &-our-patients-div {
-        @include max-screen(sm) {
-            min-height: 200px;
-        }
-        @include max-screen(mb) {
-            min-height: 150px;
-        }
         margin-top: 20px;
         min-height: 350px;
         position: relative;
         width: 100%;
+        @include max-screen(mb) {
+            clip-path: none;
+            background-color: white;
+        }
         clip-path: ellipse(92% 100% at 50% 0%);
         background-color: whitesmoke;
         h1 {
-            @include max-screen(sm) {
-                font-size: 35px;
-            }
             @include max-screen(mb) {
-                font-size: 25px;
-                padding-top: 20px;
+                font-size: 35px;
             }
             width: 100%;
             text-align: center;
@@ -398,18 +378,6 @@
         }
     }
     &-our-patients-div-images {
-        @include max-screen(sm) {
-            margin-top: -70px;
-            width: 100%;
-            padding-right: 5%;
-            padding-left: 5%;
-        }
-        @include max-screen(mb) {
-            width: 100%;
-            padding-right: 5%;
-            padding-left: 5%;
-        }
-
         height: 200px;
         padding-bottom: 100px;
         width: 100%;
@@ -419,30 +387,34 @@
         position: absolute;
         z-index: 5;
         @include flexRow;
-
+        @include max-screen(mb) {
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: -220px;
+        }
         justify-content: space-evenly;
         align-items: center;
         align-content: center;
 
         &-left-curve {
-            @include max-screen(sm) {
-                margin: 10px;
-                border-top-left-radius: 25px;
-                border-bottom-right-radius: 25px;
-            }
+            margin: 5px;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px;
             overflow: hidden;
+            @include max-screen(mb) {
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px; 
+            }
         }
 
         &-right-curve {
-            @include max-screen(sm) {
-                border-top-right-radius: 25px;
-                border-bottom-left-radius: 25px;
-            }
             border-top-right-radius: 50px;
             border-bottom-left-radius: 50px;
             overflow: hidden;
+            @include max-screen(mb) {
+                border-top-right-radius: 25px;
+                border-bottom-left-radius: 25px;   
+            }
         }
     }
 
@@ -456,13 +428,12 @@
         margin-top: 100px;
         padding-bottom: 50px;
         align-content: center;
-
+        @include max-screen(mb) {
+            margin-top: 0;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
         button {
-            @include max-screen(mb) {
-                padding-left: 40px;
-                padding-right: 40px;
-                font-size: 12px;
-            }
             background-color: $red;
             padding-left: 60px;
             padding-right: 60px;
@@ -473,6 +444,9 @@
             font-weight: 500;
             margin-bottom: 60px;
             border: none;
+            @include max-screen(mb) {
+                font-size: 14px;
+            }
         }
         &-social-container {
             @include flexRow;
