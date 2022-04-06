@@ -11,16 +11,25 @@
         justify-content: center;
         align-items: flex-start;
         padding-left: 120px;
+        @include max-screen(md){
+            padding-left: 20px;
+        }
         &-heading {
             color: black;
             font-size: 60px;
             line-height: 0.8;
             font-weight: bold;
+            @include max-screen(md){
+                font-size: 40px;
+            }
         }
         &-sub-heading {
             color: $red;
             font-size: 60px;
             font-weight: bold;
+            @include max-screen(md){
+                font-size: 40px;
+            }
         }
         &-button {
             padding-left: 20px;
@@ -32,6 +41,12 @@
             font-weight: 600;
             background-color: white;
             border: 2px solid $red;
+            @include max-screen(md){
+                font-size: 14px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
         }
     }
 
@@ -39,10 +54,24 @@
         @include flexRow;
         justify-content: space-between;
         padding-left: 5%;
+        text-align: center;
+        align-items: center;
+        align-content: center;
         padding-right: 5%;
+        @include max-screen(md){
+            flex-direction: column;
+        }
+        @include min-screen(sm){
+          flex-direction: row;
+        }
+
         h1 {
             color: $red;
             font-weight: bold;
+            @include min-screen(sm){
+               margin: 0;
+            }
+            margin-bottom: 20px;
         }
         div {
             @include flexRow;
@@ -65,9 +94,10 @@
         &-container {
             width: 50%;
             @include flexColumn;
-            justify-content: space-around;
+            justify-content: space-between;
 
             &-image {
+                padding-right: 10px;
                 margin-top: 25px;
                 margin-bottom: 25px;
                 @include flexRow;
@@ -82,6 +112,18 @@
                     width: 50%;
                     margin-left: -80px;
                     clip-path: circle();
+                    @include min-screen(xs){
+                        margin-left: -20px;
+                    }
+                    @include min-screen(sm){
+                        margin-left: -35px;
+                    }
+                    @include min-screen(md){
+                        margin-left: -50px;
+                    }
+                    @include min-screen(lg){
+                        margin-left: -80px;
+                    }
                 }
             }
 
@@ -92,6 +134,11 @@
                 color: black;
                 margin-bottom: 15px;
                 font-weight: bold;
+                @include max-screen(md){
+                    font-size: 16px;
+                }  @include min-screen(sm){
+                    font-size: 20px;
+                }
             }
         }
     }
