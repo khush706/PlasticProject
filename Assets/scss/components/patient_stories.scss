@@ -6,6 +6,10 @@
         align-items: center;
         background-color: white;
         align-content: center;
+        @include max-screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         &-left-row {
             background-color: $red;
             i {
@@ -32,6 +36,10 @@
             @include flexRow;
         }
         &-right-row {
+            @include max-screen(sm) {
+                width: 100%;
+                justify-content: space-between;
+            }
             background-color: white;
             @include flexRow;
             justify-content: center;
@@ -47,6 +55,12 @@
                     color: $red;
                 }
                 p {
+                    @include max-screen(sm) {
+                        display: none;
+                    }
+                    @include max-screen(md) {
+                        font-size: 12px;
+                    }
                     font-weight: 300;
                     font-size: 14px;
                 }
@@ -63,6 +77,14 @@
         padding-top: 10px;
         color: $red;
         border-bottom: 2px solid $grey94;
+
+        @include max-screen(sm) {
+            padding-left: 0;
+            text-align: center;
+        }
+        @include max-screen(md) {
+            font-size: 18px;
+        }
     }
 
     &__nav-row {
@@ -72,10 +94,24 @@
         padding-top: 12px;
         padding-bottom: 12px;
 
+        @include max-screen(md) {
+            padding-left: 5px;
+            justify-content: space-evenly;
+        }
+       
         p {
             font-size: 18px;
             color: black;
             padding-right: 50px;
+
+            @include max-screen(md) {
+                padding-right: 5px;
+                font-size: 12px;
+            }
+           @media only screen and (min-width: 700px){
+               font-size: 15px;
+           }
+            
         }
         p:hover {
             color: $red;
@@ -100,14 +136,28 @@
         background-position: center;
         background-size: cover;
 
+        @include max-screen(sm) {
+            padding-left: 10px;
+        }
+        @include max-screen(md) {
+            padding-left: 30px;
+            font-size: 14px;
+        }
         &-heading {
             color: black;
             font-size: 60px;
             padding: 0;
             line-height: 0.5;
             margin: 0;
+
+            @include max-screen(sm) {
+                font-size: 40px;
+            }
         }
         &-sub-heading {
+            @include max-screen(sm) {
+                font-size: 40px;
+            }
             font-size: 60px;
             color: $red;
         }
@@ -117,55 +167,80 @@
             border: 0.1px solid $red;
             padding: 20px;
             font-weight: 500;
+
+            @include max-screen(sm) {
+                font-size: 15px;
+            }
         }
     }
 
-    &-page-location{
+    &-page-location {
         @include flexRow;
         justify-content: space-between;
         padding-left: 7%;
         margin-top: 30px;
         padding-right: 7%;
-        h1{
+        h1 {
+            @include max-screen(sm) {
+                width: 100%;
+                text-align: center;
+                font-size: 30px;
+            }
             color: $red;
-
         }
-        p{
+        p {
+            @include max-screen(sm) {
+                display: none;
+            }
+            @include max-screen(md) {
+                display: none;
+            }
             font-size: 16px;
             color: $orange;
         }
-        
     }
-    &-page-location-details{
+    &-page-location-details {
         padding-left: 7%;
         margin-top: 30px;
         line-height: 1.7;
         font-size: 18px;
-        padding-right: 7%;    
+        padding-right: 7%;
+
+        @include max-screen(sm) {
+            font-size: 12px;
+            text-align: justify;
+        }
+        @include min-screen(sm) {
+            text-align: justify;
+        }
     }
 
-    &-stories{
+    &-stories {
         @include flexRow;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 20px;
+
+        @include max-screen(sm) {
+            justify-content: center;
+        }
         margin-bottom: 40px;
         padding-left: 7%;
         padding-right: 7%;
-        
-        &-patient{
+
+        &-patient {
             margin-top: 20px;
             margin-bottom: 20px;
             background-color: whitesmoke;
             background-image: linear-gradient(to bottom, white, whitesmoke);
             @include flexColumn;
             justify-content: space-between;
-            img{
-                box-shadow: 0px 25px 20px -20px #111;    
+            img {
+                box-shadow: 0px 25px 20px -20px #111;
                 border-radius: 50%;
                 margin-bottom: 15px;
             }
-            p{
+            p {
                 width: 100%;
                 text-align: center;
                 margin-top: 15px;
@@ -173,7 +248,7 @@
                 font-size: 15px;
                 margin-bottom: 15px;
             }
-            a{
+            a {
                 margin-top: 20px;
                 padding-top: 15px;
                 width: 100%;
