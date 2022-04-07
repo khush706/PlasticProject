@@ -1,0 +1,150 @@
+.our__services__body {
+    &-background-image {
+        background-image: url("../../images/our-services-background-image.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 100%;
+        min-height: 500px;
+        clip-path: ellipse(127% 88% at 50% 0%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        line-height: 1;
+        padding-left: 120px;
+
+        &-heading-one {
+            color: $black;
+            font-size: 60px;
+        }
+        &-heading-two {
+            color: $red;
+            font-size: 60px;
+        }
+        &-button {
+            margin-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            border: 2px solid $red;
+        }
+    }
+
+    &-page-location {
+        @include flexRow;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: space-between;
+        h1 {
+            color: $red;
+            font-size: 35px;
+        }
+        div {
+            @include flexRow;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            p {
+                padding-right: 5px;
+                font-size: 18px;
+                color: $orange;
+            }
+        }
+    }
+
+    &-offer-services {
+        margin-top: 30px;
+        @include flexRow;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        align-items: flex-start;
+        align-content: center;
+
+        &-details {
+            width: 64%;
+            @include flexColumn;
+            justify-content: center;
+
+            &-p{
+                font-size: 18px;
+                line-height: 2;
+            }
+
+            &-div {
+                @include flexColumn;
+                justify-content: start;
+                align-items: flex-start;
+                width: 100%;
+                &-heading {
+                    margin-top: 20px;
+                    @include flexRow;
+                    justify-content: start;
+                    align-items: center;
+                    align-content: center;
+                    i {
+                        font-size: 22px;
+                        padding-right: 20px;
+                    }
+                    h1 {
+                        color: $black;
+                        font-size: 20px;
+                    }
+                }
+                &-sub-heading {
+                    display: none;
+                    margin-left: 10px;
+                    padding-left: 30px;
+                    border-left: 3px solid gray;
+                    p {
+                        font-size: 18px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+        &-booking {
+            width: 28%;
+            @include flexColumn;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: center;
+            img{
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                float: right;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                margin-bottom: 20px;
+            }
+            &-button-before-after{
+                margin-top: 20px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: white;
+                border: 1px solid $red;
+            }
+            &-button-request-consult{
+                margin-top: 20px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                color: white;
+                padding-right: 20px;
+                background-color: $red;
+                margin-bottom: 40px;
+                border: none;  
+            }
+        }
+    }
+}
