@@ -14,14 +14,33 @@
         align-content: center;
         line-height: 1;
         padding-left: 120px;
-
+        @include breakpoint-between(xs, md) {
+            padding-left: 20px;
+        }
+        @include breakpoint-between(md, lg) {
+            padding-left: 60px;
+        }
+        @include min-screen(xl){
+            padding-left: 120px;
+        }
         &-heading-one {
             color: $black;
             font-size: 60px;
+            @include breakpoint-between(xs, sm) {
+                font-size: 35px;
+            }
+            @include breakpoint-between(sm, md) {
+                font-size: 45px;
+            }
         }
         &-heading-two {
             color: $red;
             font-size: 60px;
+            @include breakpoint-between(xs, sm) {
+                font-size: 35px;
+            }@include breakpoint-between(sm, md) {
+                font-size: 45px;
+            }
         }
         &-button {
             margin-top: 20px;
@@ -33,6 +52,9 @@
             color: black;
             font-weight: 700;
             border: 2px solid $red;
+            @include breakpoint-between(xs, sm) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -40,20 +62,31 @@
         @include flexRow;
         padding-left: 5%;
         padding-right: 5%;
+        @include breakpoint-between(xs, sm) {
+            padding-left: 3%;
+        }
         justify-content: space-between;
         h1 {
             color: $red;
             font-size: 35px;
+            @include breakpoint-between(xs, sm) {
+                width: 100%;
+                font-size: 25px;
+            }
         }
         div {
             @include flexRow;
             justify-content: space-between;
             align-items: center;
             align-content: center;
+
             p {
                 padding-right: 5px;
                 font-size: 18px;
                 color: $orange;
+                @include breakpoint-between(xs, md) {
+                    display: none;
+                }
             }
         }
     }
@@ -66,15 +99,25 @@
         padding-right: 5%;
         align-items: flex-start;
         align-content: center;
-
+        @include breakpoint-between(xs, md) {
+            flex-direction: column;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
         &-details {
             width: 64%;
+            @include breakpoint-between(xs, md) {
+                width: 100%;
+            }
             @include flexColumn;
             justify-content: center;
 
-            &-p{
+            &-p {
                 font-size: 18px;
                 line-height: 2;
+                @include breakpoint-between(xs, sm) {
+                    font-size: 14px;
+                }
             }
 
             &-div {
@@ -82,8 +125,10 @@
                 justify-content: start;
                 align-items: flex-start;
                 width: 100%;
+
                 &-heading {
                     margin-top: 20px;
+                    
                     @include flexRow;
                     justify-content: start;
                     align-items: center;
@@ -91,32 +136,53 @@
                     i {
                         font-size: 22px;
                         padding-right: 20px;
+                        @include breakpoint-between(xs, sm) {
+                            font-size: 18px;
+                        }
                     }
                     h1 {
                         color: $black;
                         font-size: 20px;
+                        @include breakpoint-between(xs, sm) {
+                            font-size: 16px;
+                        }
                     }
                 }
                 &-sub-heading {
                     display: none;
                     margin-left: 10px;
-                    padding-left: 30px;
+                    margin-top: 15px;
+                    padding-left: 29px;
                     border-left: 3px solid gray;
+                    @include breakpoint-between(xs, sm) {
+                        margin-left: 8px;
+                    }
                     p {
+                        margin-top: -12px;
+                        margin-bottom: -12px;
                         font-size: 18px;
                         line-height: 1.5;
+                        @include breakpoint-between(xs, sm) {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
         }
 
         &-booking {
+            
             width: 28%;
             @include flexColumn;
             justify-content: space-between;
             align-items: flex-start;
             align-content: center;
-            img{
+            @include breakpoint-between(xs, md) {
+             width: 100%; 
+             margin-top: 40px;    
+             align-items: center;
+            }
+            img {
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
@@ -124,8 +190,13 @@
                 border-top-right-radius: 50px;
                 border-bottom-left-radius: 50px;
                 margin-bottom: 20px;
+                @include breakpoint-between(xs, md) {
+                    width: 70%;
+                    border-top-right-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                }
             }
-            &-button-before-after{
+            &-button-before-after {
                 margin-top: 20px;
                 padding-top: 12px;
                 padding-bottom: 12px;
@@ -134,7 +205,7 @@
                 background-color: white;
                 border: 1px solid $red;
             }
-            &-button-request-consult{
+            &-button-request-consult {
                 margin-top: 20px;
                 padding-top: 12px;
                 padding-bottom: 12px;
@@ -143,7 +214,7 @@
                 padding-right: 20px;
                 background-color: $red;
                 margin-bottom: 40px;
-                border: none;  
+                border: none;
             }
         }
     }
