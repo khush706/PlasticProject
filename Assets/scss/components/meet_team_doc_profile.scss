@@ -1,0 +1,133 @@
+.meet__team__profile-body {
+    &-background-image {
+        width: 100%;
+        min-height: 500px;
+        background-image: linear-gradient(90deg, white, transparent),
+            url("../../images/meet-team-doc-background-image.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        clip-path: ellipse(100% 100% at 50% 0%);
+        @include flexColumn;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        padding-left: 5%;
+        &-heading-one {
+            font-size: 60px;
+            line-height: 0.5;
+            color: $black;
+            @include breakpoint-between(xs,md){
+                font-size: 45px;
+            }
+        }
+        &-heading-two {
+            font-size: 60px;
+            color: $red;
+            @include breakpoint-between(xs,md){
+                font-size: 45px;
+            }
+        }
+        &-button {
+            background-color: white;
+            font-size: 16px;
+            border: 1px solid $red;
+            font-weight: 600;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            @include breakpoint-between(xs,md){
+                font-size: 14px;
+            }
+        }
+    }
+    &-page-location {
+        margin-top: 40px;
+        @include flexRow;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        &-heading {
+            @include breakpoint-between(xs,md){
+                width: 100%;
+                font-size: 35px;
+            }
+            color: $red;
+            font-size: 40px;
+        }
+        &-div {
+            @include breakpoint-between(xs,md){
+                display: none
+            }
+            @include flexRow;
+            justify-content: center;
+            &-p {
+                padding-right: 5px;
+                font-size: 18px;
+                color: $orange;
+            }
+        }
+    }
+
+    &-meet-team-heading {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &-info-container {
+        @include flexRow;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        &-div {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            background-image: linear-gradient(to bottom, white, whitesmoke);
+            @include flexColumn;
+            justify-content: space-between;
+     
+            &-image {
+                box-shadow: 0px 25px 20px -20px #111;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+            &-doc-name {
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+                line-height: 1.5;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            &-doc-work,
+            &-doc-department {
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
+                font-size: 15px;
+            }
+
+            &-view-info-button {
+                margin-top: 20px;
+                padding-top: 15px;
+                width: 100%;
+                background-color: $red;
+                text-decoration: none;
+                color: white;
+                border: none;
+                text-align: center;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
