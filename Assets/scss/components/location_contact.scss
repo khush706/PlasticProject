@@ -1,6 +1,4 @@
-
-
-.location__body {
+.location__contact__body {
     &__background-image {
         background-image: linear-gradient(90deg, white, transparent), url("../../images/location-background.png");
         width: 100%;
@@ -18,18 +16,21 @@
         &-heading {
             font-size: 60px;
             color: $black;
-            line-height: 0.7;
-            @include breakpoint-between(xs,sm){
+            max-width: 70%;
+            line-height: 1;
+            @include breakpoint-between(xs, sm) {
                 font-size: 35px;
             }
         }
         &-sub-heading {
             font-size: 60px;
-            color: $red; @include breakpoint-between(xs,sm){
+            color: $red;
+            @include breakpoint-between(xs, sm) {
                 font-size: 35px;
             }
         }
         &-button {
+            cursor: pointer;
             background-color: white;
             border: 1px solid $red;
             padding-left: 30px;
@@ -38,118 +39,124 @@
             padding-bottom: 15px;
             font-size: 16px;
             font-weight: 600;
-            @include breakpoint-between(xs,sm){
-               padding-left: 15px;
-               padding-right: 15px;
-               padding-top: 10px;
-               padding-bottom: 10px;
-
+            @include breakpoint-between(xs, sm) {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
         }
     }
 
-    &__page-location {
+    &-page-location {
         @include flexRow;
         justify-content: space-between;
         align-items: center;
-        margin-top: 40px;
+        align-content: center;
         padding-left: 5%;
         padding-right: 5%;
-        align-content: center;
-
+        margin-top: 40px;
         &-heading {
-            font-size: 45px;
+            font-size: 40px;
             color: $red;
-            @include breakpoint-between(xs,sm){
-                font-size: 35px;
-                width: 100%;
-            }
         }
-        &-sortBtn {
-            @include breakpoint-between(xs,sm){
-                display: none;
+        &-div {
+            @include flexRow;
+            justify-content: center;
+            &-p {
+                padding-right: 5px;
+                font-size: 18px;
+                color: $orange;
             }
-            font-size: 16px;
-            color: $black;
         }
     }
 
-    &__location-details {
-        margin-top: 40px;
-        @include flexRow;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
+    &-about-text {
         padding-left: 5%;
         padding-right: 5%;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
 
-        @include breakpoint-between(xs,md){
-            justify-content: center;
+    &-contact-details {
+        @include flexRow;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        min-width: 100%;
+        align-items: stretch;
+        align-content: center;
+        margin-bottom: 40px;
+
+        &-div {
+            margin-top: 40px;
+            width: 48%;
+
+            &-image {
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                width: 100%;
+            }
         }
 
-        &-container {
+        &-contact {
+            width: 48%;
             @include flexColumn;
-            flex-wrap: wrap;
+            margin-top: 40px;
+            align-items: flex-start;
             justify-content: space-between;
+            align-items: flex-start;
             align-content: center;
-            align-items: center;
-            box-shadow: 0px 3px 8px gray;
-            margin-bottom: 50px;
 
-            &-image-div {
-                width: 100%;
-                &-image{
-                    object-fit: cover;
-                    width: 100%;
-                    box-shadow: 0 8px 6px -6px gray;
-                }
-                &-heading {
-                    padding-left: 5%;
-                    padding-right: 5%;
-                    margin-top: 10px;
-                    font-size: 20px;
-                    color: $black;
-                }
-                &-address {
-                    padding-left: 5%;
-                    padding-right:5%;
-                    margin-top: 5px;
-                    line-height: 2;
-                    white-space: pre-line;
-                    font-size: 16px;
-                }
-                &-mobile-number {
-                    padding-left: 5%;
-                    padding-right: 5%;
-                    font-size: 16px;
-                    color: $red;
-                    margin-top: 5px;
-                    line-height: 2;
-                    font-weight: bold;
+            &-heading{
+                color: $red;
+                font-size: 35px;
+            }
+
+            &-address {
+                @include flexRow;
+                justify-content: space-between;
+                align-items: flex-start;
+                &-div {
+                    width: 48%;
+                    &-heading {
+                        color: $black;
+                        font-size: 22px;
+                        margin-bottom: 25px;
+                    }
+                    &-address {
+                        font-size: 18px;
+                        line-height: 1.8;
+                    }
+                    &-time {
+                        font-size: 18px;
+                        line-height: 1.8;
+                        
+                    }
+                    &-contact-number {
+                        font-size: 20px;
+                        line-height: 1.8;
+                        margin-top: 15px;
+                        color: $red;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
                 }
             }
 
-            &-office-hours-div {
-                width: 100%;
-                background-color: whitesmoke;
-                padding-left: 5%;
-                padding-right: 5%;
+            &-button{
+                padding-left: 20px;
+                padding-right: 20px;
                 padding-top: 15px;
                 padding-bottom: 15px;
-
-                &-heading {
-                    font-size: 20px;
-                    color: $red;
-                    margin-bottom: 10px;
-                }
-
-                &-time {
-                    font-size: 16px;
-                    line-height: 2;
-                }
+                background-color: $red;
+                border: none;
+                color: $white;
+                font-size: 18px;
             }
+
         }
     }
 }
