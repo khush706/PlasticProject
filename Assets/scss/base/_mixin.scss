@@ -151,3 +151,7 @@ xl: 1200px);
     align-content: center;
 }
 
+@mixin padding {
+    padding-left: 5%;
+    padding-right: 5%;
+}

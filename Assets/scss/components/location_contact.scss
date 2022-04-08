@@ -59,8 +59,15 @@
         &-heading {
             font-size: 40px;
             color: $red;
+            @include breakpoint-between(xs,md){
+                font-size: 30px;
+                text-align: center;
+            }
         }
         &-div {
+            @include breakpoint-between(xs,md){
+                display: none;
+            }
             @include flexRow;
             justify-content: center;
             &-p {
@@ -78,6 +85,9 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 1.8;
+        @include breakpoint-between(xs,md){
+            font-size: 14px;
+        }
     }
 
     &-contact-details {
@@ -89,19 +99,31 @@
         align-items: stretch;
         align-content: center;
         margin-bottom: 40px;
+        @include breakpoint-between(xs,lg){
+            flex-direction: column;
+        }
 
         &-div {
             margin-top: 40px;
             width: 48%;
-
+            @include breakpoint-between(xs,lg){
+                width: 100%;
+            }
             &-image {
                 border-top-right-radius: 50px;
                 border-bottom-left-radius: 50px;
                 width: 100%;
+                @include breakpoint-between(xs,lg){
+                    border-top-right-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                }
             }
         }
 
         &-contact {
+            @include breakpoint-between(xs,lg){
+                width: 100%;
+            }
             width: 48%;
             @include flexColumn;
             margin-top: 40px;
@@ -113,14 +135,26 @@
             &-heading{
                 color: $red;
                 font-size: 35px;
+                @include breakpoint-between(xs,lg){
+                 font-size: 25px;
+                 width: 100%;
+                 text-align: start;
+                 margin-bottom: 20px;
+                }
             }
 
             &-address {
                 @include flexRow;
                 justify-content: space-between;
                 align-items: flex-start;
+                @include breakpoint-between(xs,lg){
+                    flex-direction: column;
+                }
                 &-div {
                     width: 48%;
+                    @include breakpoint-between(xs,lg){
+                     width: 100%;
+                    }
                     &-heading {
                         color: $black;
                         font-size: 22px;
@@ -155,6 +189,10 @@
                 border: none;
                 color: $white;
                 font-size: 18px;
+                @include breakpoint-between(xs,lg){
+                    margin-top: 25px;
+                    width: 100%;
+                   }
             }
 
         }
